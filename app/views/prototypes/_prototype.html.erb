@@ -1,6 +1,6 @@
 <div class="card">
  <% @prototypes.each do |proto| %>
-  <%= link_to image_tag(proto.image, class: :card__img ), prototype_path(proto.id) if message.image.attached? %>
+  <%= link_to image_tag(proto.image, class: :card__img ), prototype_path(proto.id) if proto.image.attached? %>
   <div class="card__body">
     <%= link_to proto.title, prototype_path(proto.id), class: :card__title %>
     <p class="card__summary">
